@@ -8,7 +8,7 @@ Built purely with semantic HTML5 and meticulously styled CSS3, this project focu
 
 You can view a live demo of this project here: [Fashion Hub](https://mamalireza.github.io/fashion_hub/)
 
-![Fashion Hub](https://github.com/mamalireza/fashion_hub/blob/main/fashion_hub.png)
+![Fashion Hub](https://github.com/Mamalireza/Fashion_Hub/blob/main/Fashion_Hub.png)
 
 ## 🛠️ Tech Stack
 
