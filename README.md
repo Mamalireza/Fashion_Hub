@@ -6,7 +6,7 @@ Built purely with semantic HTML5 and meticulously styled CSS3, this project focu
 
 ## 📸 Preview
 
-You can view a live demo of this project here: [Fashion Hub](https://mamalireza.github.io/fashion_hub/)
+You can view a live demo of this project here: [Fashion Hub](https://mamalireza.github.io/Fashion_Hub/)
 
 ![Fashion Hub](https://github.com/Mamalireza/Fashion_Hub/blob/main/Fashion_Hub.png)
 
