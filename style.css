@@ -12,7 +12,10 @@
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 8px #0d3356;
+}
+
+*:focus-visible {
+  box-shadow: 0 0 0 4px #0d3356;
 }
 
 ::-webkit-scrollbar {
@@ -31,7 +34,6 @@
 body {
   font-family: "Inter", sans-serif;
   min-height: 100dvh;
-  min-width: 1440px;
   background-color: #fff;
   color: #0d3356;
   font-weight: 400;
@@ -144,6 +146,7 @@ header {
         height: 48px;
         border-radius: 99px;
         object-fit: cover;
+        object-position: center;
         cursor: pointer;
       }
       .good-morning {
@@ -159,9 +162,11 @@ header {
 }
 
 main {
-  padding: 40px 80px;
+  width: 1440px;
+  margin: 0 auto;
 
   .hero-section {
+    padding: 40px 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,7 +174,7 @@ main {
 
     .hero-img-div {
       display: grid;
-      grid-template-columns: auto 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       align-items: center;
       column-gap: 20px;
       row-gap: 32px;
@@ -178,6 +183,7 @@ main {
         width: 135px;
         height: 135px;
         object-fit: cover;
+        object-position: center;
         border-radius: 14px;
       }
 
@@ -185,6 +191,7 @@ main {
         grid-column: span 4;
         width: 600px;
         height: 705px;
+        object-position: top;
         border-radius: 16px;
         border: solid 1px #e4e4e4;
       }
@@ -647,6 +654,341 @@ main {
           padding-top: 20px;
         }
       }
+    }
+  }
+
+  .reviews-section {
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #1d2939;
+    }
+
+    .review-div {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      width: 836px;
+
+      .users {
+        width: 48px;
+        height: 48px;
+        border-radius: 99px;
+        object-fit: cover;
+        object-position: center;
+        cursor: pointer;
+      }
+
+      .reviews-texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        .reviewer-status {
+          display: grid;
+          grid-template-columns: 116px 64px;
+          align-items: center;
+          gap: 4px;
+
+          .reviewer-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: #1d2939;
+          }
+
+          .reviewer-lastseen {
+            font-size: 12px;
+            color: #6f7788;
+          }
+
+          .reviewer-stars {
+            cursor: pointer;
+
+            img {
+              width: 12px;
+              height: 12px;
+            }
+            img:hover {
+              transform: rotateY(180deg);
+              cursor: pointer;
+              transition: all 0.6s ease;
+            }
+          }
+        }
+
+        .reviews-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 4px;
+
+          span {
+            color: #3a4980;
+          }
+
+          p {
+            font-size: 15px;
+            color: #6f7788;
+            line-height: 24px;
+          }
+        }
+
+        .reviews-button {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+
+          button {
+            padding: 4px 6px;
+            color: #d75951;
+            background-color: rgba(215, 89, 81, 0);
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+          }
+
+          button:hover {
+            background-color: rgba(215, 89, 81, 0.25);
+          }
+
+          .like-button {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #6f7788;
+            background-color: rgba(111, 119, 136, 0);
+          }
+
+          .like-button:hover {
+            background-color: rgba(111, 119, 136, 0.25);
+          }
+        }
+      }
+    }
+
+    .reviews-border {
+      background-color: #efefef;
+      width: 1280px;
+      padding: 1px 0;
+      margin: 32px 0;
+    }
+  }
+
+  .wreview-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding: 40px 80px;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #1d2939;
+    }
+
+    .wreview-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+
+      .wreview-title-div {
+        width: 840px;
+
+        label {
+          font-size: 16px;
+          font-weight: 500;
+          color: #1d2939;
+        }
+
+        input {
+          width: 100%;
+          padding: 16px 24px;
+          font-size: 14px;
+          border: 1px solid #e4e4e4;
+          border-radius: 14px;
+          margin-top: 8px;
+        }
+      }
+
+      .wreview-content-div {
+        width: 840px;
+
+        label {
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 8px;
+          color: #1d2939;
+        }
+
+        textarea {
+          font-family: "Inter", sans-serif;
+          width: 100%;
+          padding: 16px 24px;
+          font-size: 14px;
+          border: 1px solid #e4e4e4;
+          border-radius: 14px;
+          margin-top: 8px;
+          line-height: 24px;
+        }
+      }
+      .submit-btn {
+        width: 185px;
+        padding: 16px 28px;
+        background-color: #3a4980;
+        color: #fff;
+        border: none;
+        border-radius: 99px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .submit-btn:hover {
+        background-color: rgba(58, 73, 128, 0.95);
+      }
+    }
+  }
+
+  .products-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding: 40px 80px;
+    position: relative;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #1d2939;
+    }
+
+    .products-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+
+      .product-container {
+        width: 240px;
+        border-radius: 16px;
+        background-color: #f1f6fd;
+        cursor: pointer;
+        position: relative;
+
+        .product-img {
+          img {
+            object-fit: cover;
+            object-position: center;
+            height: 240px;
+            width: 100%;
+            border-radius: 16px 16px 0 0;
+          }
+        }
+
+        .product-like-btn {
+          background-color: rgb(255, 255, 255, 0.6);
+          border-radius: 99px;
+          width: 32px;
+          height: 32px;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          cursor: pointer;
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        .product-like-btn:hover {
+          background-color: rgb(255, 255, 255, 1);
+        }
+
+        .product-text {
+          margin: 16px 0 16px 16px;
+
+          .product-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: #6f7788;
+            margin-bottom: 6px;
+          }
+
+          .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #3a4980;
+            margin-bottom: 12px;
+          }
+
+          .product-availablity {
+            color: #b9bbbf;
+            margin-bottom: 16px;
+          }
+
+          .product-stars {
+            cursor: pointer;
+            img:hover {
+              transform: rotateY(180deg);
+              cursor: pointer;
+              transition: all 0.6s ease;
+            }
+          }
+
+          .product-rate {
+            color: #b9bbbf;
+          }
+        }
+      }
+
+      .product-container:hover {
+        background-color: #eaf1fc;
+      }
+    }
+
+    .arrow-left,
+    .arrow-right {
+      background-color: rgb(255, 255, 255, 0.6);
+      width: 36px;
+      height: 36px;
+      border: solid 1px #e4e4e4;
+      border-radius: 99px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      cursor: pointer;
+      top: 100px;
+    }
+
+    .arrow-left {
+      left: -18px;
+    }
+
+    .arrow-right {
+      right: -18px;
+    }
+
+    .arrow-left:hover,
+    .arrow-right:hover {
+      background-color: rgb(255, 255, 255, 1);
     }
   }
 }
